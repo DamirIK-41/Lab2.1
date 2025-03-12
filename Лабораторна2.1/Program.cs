@@ -1,6 +1,5 @@
-﻿
-
-using System.ComponentModel;
+﻿using System.ComponentModel;
+using System.Linq;
 
 
 while (true)
@@ -29,7 +28,7 @@ while (true)
                     R.Add(U[i] / I[i]);
                 }
                 Console.WriteLine(string.Join(", ", R));
-                double AverageR = R.Average();
+                double AverageR = (I.Sum()*U.Sum())/(Math.Pow(I.Sum(), 2));
                 Console.WriteLine($"Наближене значення опору R = {AverageR}");
             }
             break;
